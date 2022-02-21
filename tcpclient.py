@@ -11,7 +11,7 @@ logger.info("We connect the client")
 client.connect((target_host, target_port))
 
 logger.info("We send some data")
-client.send("GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")
+client.send(b'GET / HTTP/1.1\r\nHost: google.com\r\n\r\n')
 
 logger.info("We receive some data")
 response = client.recv(4096)
